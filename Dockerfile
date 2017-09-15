@@ -2,7 +2,7 @@ FROM node:8.4.0
 
 ENV NPM_CONFIG_LOGLEVEL error
 
-# Install Oracle client
+# Install Oracle client!
 RUN mkdir -p opt/oracle
 WORKDIR /opt/oracle
 COPY ./oracle/ ./
