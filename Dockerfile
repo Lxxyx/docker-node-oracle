@@ -23,3 +23,12 @@ ENV OCI_LIB_DIR="/opt/oracle/instantclient"
 ENV OCI_INCLUDE_DIR="/opt/oracle/instantclient/sdk/include"
 
 RUN echo '/opt/oracle/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_client.conf && ldconfig
+
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 \
+  && echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.2 main" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list \
+  && apt-get update \
+  && apt-get install -y mongodb-org --no-install-recommends \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN mongo --version
