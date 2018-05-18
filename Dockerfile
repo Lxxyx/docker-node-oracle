@@ -1,4 +1,4 @@
-FROM node:10.0.1
+FROM node:8.4.0
 
 RUN npm i cnpm -g
 
