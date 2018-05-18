@@ -1,4 +1,6 @@
-FROM node:8.4.0
+FROM node:10.0.1
+
+RUN npm i cnpm -g
 
 ENV NPM_CONFIG_LOGLEVEL error
 
