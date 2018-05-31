@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:3.11.0-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:3.11.0
 
 RUN npm i cnpm pm2 -g
 
