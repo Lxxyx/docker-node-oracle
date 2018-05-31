@@ -1,6 +1,6 @@
-FROM node:8.4.0
+FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:3.11.0-alpine
 
-RUN npm i cnpm -g
+RUN npm i cnpm pm2 -g
 
 ENV NPM_CONFIG_LOGLEVEL error
 
