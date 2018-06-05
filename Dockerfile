@@ -1,6 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:3.11.0
 
-RUN npm i cnpm pm2 -g
+RUN npm i cnpm pm2 oracledb -g
 
 ENV NPM_CONFIG_LOGLEVEL error
 
