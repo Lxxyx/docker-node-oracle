@@ -1,7 +1,5 @@
 FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:3.11.0
 
-RUN npm i cnpm pm2 oracledb -g
-
 ENV NPM_CONFIG_LOGLEVEL error
 
 # Install Oracle client
@@ -36,3 +34,5 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mongo --version
+
+RUN npm i cnpm pm2 oracledb -g
